@@ -10,7 +10,7 @@
             role: 'Software Engineer',
             period: '2023 - Present',
             focus: 'Building cross-platform mobile applications with React Native and Expo. Architecting modern web solutions using Next.js, SolidJS, and 11ty. Leveraging Grafana for monitoring and Azure/AWS for cloud infrastructure.',
-            tags: ['REACT NATIVE', 'EXPO', 'NEXT.JS', 'SOLIDJS', 'AZURE', 'AWS'],
+            tags: ['REACT NATIVE', 'EXPO', 'NEXT.JS', 'AZURE', 'AWS'],
             color: 'red'
         },
         {
@@ -26,7 +26,7 @@
             role: 'BSc Computer Science',
             period: '2022 - 2024',
             focus: 'Foundation in algorithms, data structures, and software engineering principles.',
-            tags: ['C++', 'PYTHON', 'ALGORITHMS'],
+            tags: ['Operating Systems', 'Databases', 'Networks', 'Graphics'],
             color: 'blue'
         }
     ];
@@ -34,12 +34,12 @@
     const SKILLS = [
         {
             category: 'MOBILE & WEB',
-            items: ['React Native / Expo', 'Next.js / SolidJS', '11ty (Static Site Gen)', 'TypeScript / JavaScript'],
+            items: ['React Native / Expo', 'Next.js / SolidJS / Svelte', '11ty (Static Site Gen)', 'TypeScript / JavaScript'],
             color: 'var(--color-red)'
         },
         {
             category: 'CLOUD & OPS',
-            items: ['Azure / AWS', 'Grafana (Monitoring)', 'Docker / Kubernetes', 'CI/CD Pipelines'],
+            items: ['Azure / AWS / Vercel / Firebase', 'Grafana (Monitoring)', 'Docker', 'CI/CD Pipelines'],
             color: 'var(--color-blue)'
         }
     ];
