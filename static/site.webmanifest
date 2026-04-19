@@ -1,0 +1,29 @@
+{
+  "name": "Thups Dev Log",
+  "short_name": "Thups",
+  "icons": [
+    {
+      "src": "/icons/convertico-195020678_48x48.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/convertico-195020678_64x64.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/convertico-195020678_128x128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/convertico-195020678_256x256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#FAF6E8",
+  "background_color": "#FAF6E8",
+  "display": "standalone"
+}
