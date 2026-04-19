@@ -7,53 +7,61 @@
     const EXPERIENCE = [
         {
             title: 'EXPERIENCE: BBD',
-            role: 'Software Developer',
+            role: 'Software Engineer',
             period: '2023 - Present',
-            focus: 'Financial systems and enterprise solutions. Core contributions include the successful migration of legacy APIs and implementing performance-critical optimizations in Java Spring services.',
-            tags: ['AGILE', 'JAVA 8+', 'AWS/CLOUD', 'KAFKA'],
+            focus: 'Building cross-platform mobile applications with React Native and Expo. Architecting modern web solutions using Next.js, SolidJS, and 11ty. Leveraging Grafana for monitoring and Azure/AWS for cloud infrastructure.',
+            tags: ['REACT NATIVE', 'EXPO', 'NEXT.JS', 'SOLIDJS', 'AZURE', 'AWS'],
             color: 'red'
         },
         {
-            title: 'EDUCATION: WITS',
+            title: 'EDUCATION: WITS (HONOURS)',
+            role: 'BSc Honours in Computer Science',
+            period: '2026 - Present',
+            focus: 'Specializing in Robotics, High Performance Computing, Cybersecurity, and AI/Machine Learning.',
+            tags: ['ROBOTICS', 'HPC', 'CYBERSECURITY', 'AI/ML'],
+            color: 'green'
+        },
+        {
+            title: 'EDUCATION: WITS (UNDERGRAD)',
             role: 'BSc Computer Science',
-            period: '2019 - 2022',
-            focus: 'Deep dive into algorithms, data structures, and theoretical computing. Graduated with distinction in core Software Engineering modules.',
-            tags: ['C++', 'ALGORITHMS', 'THEORY'],
+            period: '2022 - 2024',
+            focus: 'Foundation in algorithms, data structures, and software engineering principles.',
+            tags: ['C++', 'PYTHON', 'ALGORITHMS'],
             color: 'blue'
         }
     ];
 
     const SKILLS = [
         {
-            category: 'BACKEND DEPTH',
-            items: ['Java/Spring Boot (5 years)', 'C# / .NET Core', 'PostgreSQL / MS SQL', 'RESTful API Design'],
+            category: 'MOBILE & WEB',
+            items: ['React Native / Expo', 'Next.js / SolidJS', '11ty (Static Site Gen)', 'TypeScript / JavaScript'],
             color: 'var(--color-red)'
         },
         {
-            category: 'CLOUD & DEVOPS',
-            items: ['AWS (EC2, S3, RDS)', 'Docker / Kubernetes', 'Kafka / Messaging', 'CI/CD (Jenkins)'],
+            category: 'CLOUD & OPS',
+            items: ['Azure / AWS', 'Grafana (Monitoring)', 'Docker / Kubernetes', 'CI/CD Pipelines'],
             color: 'var(--color-blue)'
         }
     ];
 
     const PROJECTS = [
         {
-            title: 'FINTECH GATEWAY',
-            description: 'High-throughput payment processing engine. Impact: Reduced transaction time by 20%.',
+            title: 'WITS PEN TESTING TOOL',
+            description: 'A specialized security auditing tool developed for the Wits University network to identify and patch vulnerabilities.',
             link: '#',
-            linkText: '[ VIEW REPORT ]'
+            linkText: '[ VIEW PROJECT ]'
         },
         {
-            title: 'LEGACY MIGRATION',
-            description: 'Successful migration of core services to the cloud using Azure. Value: Cut infrastructure costs by 15%.',
+            title: 'MOBILE ECOSYSTEM (BBD)',
+            description: 'Scalable React Native applications with integrated Expo modules and high-performance cross-platform logic.',
+            link: '#',
+            linkText: '[ CASE STUDY ]'
+        },
+        {
+            title: 'MODERN WEB STACK',
+            description: 'Exploration of performance-first frameworks like SolidJS and Next.js for enterprise-grade web experiences.',
             link: '#',
             linkText: '[ VIEW DETAILS ]'
-        },
-        {
-            title: 'WITS CAPSTONE',
-            description: 'A predictive ML model for resource allocation. Skill: Advanced Python and statistical analysis.',
-            link: '#',
-            linkText: '[ GITHUB LINK ]'
         }
     ];
 </script>
@@ -74,11 +82,11 @@
 
             <div>
                 <h1 class="hero-title">
-                    SYSTEMS<br>
+                    SOFTWARE<br>
                     ENGINEER<span class="highlight-red">.</span>
                 </h1>
                 <p style="font-size: 1.5rem; margin-top: 1rem;">
-                    <span class="highlight-blue">WITS ALUMNI</span> // Building & optimizing scalable architecture at <span class="highlight-red">BBD</span>. I turn complex problems into robust, working solutions.
+                    <span class="highlight-blue">WITS ALUMNI</span> // Software Engineer at <span class="highlight-red">BBD</span>. Specialized in building high-performance mobile and web applications with a focus on scalable architecture.
                 </p>
                 <a href="#contact" class="btn-sketch">START PROJECT // CONTACT</a>
             </div>
@@ -147,12 +155,11 @@
             Available for high-impact roles and consulting opportunities.
         </p>
         <div style="font-weight: 700; font-size: 1.3rem;">
-            <span class="highlight-red">EMAIL:</span> thups@example.com<br>
-            <span class="highlight-blue">LINKEDIN:</span> /in/thups<br>
-            <span class="highlight-green">GITHUB:</span> /thups-dev
+            <span class="highlight-red">EMAIL:</span> muthupheimukhunyeledzi@gmail.com<br>
+            <span class="highlight-blue">LINKEDIN:</span> <a href="https://www.linkedin.com/in/mukhunyeledzi-muthuphei-76b813273/" style="color: inherit; text-decoration: none;">/in/mukhunyeledzi-muthuphei</a>
         </div>
         <p style="margin-top: 3rem; font-size: 0.8rem;">
-            DEV LOG END. 2025.
+            DEV LOG END. 2026.
         </p>
     </footer>
 

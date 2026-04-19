@@ -107,13 +107,14 @@ body {
 
 /* --- 4. IMAGE (Polaroid Style) --- */
 .sketch-photo-frame {
-    width: 500px;
+    width: 200px;
     height: 320px;
     background: white;
     border: 3px solid var(--color-ink);
     padding: 10px 10px 40px 10px; /* Polaroid bottom spacing */
     margin: 0 auto 3rem;
     transform: rotate(-3deg);
+	flex:none;
     box-shadow: 5px 5px 0px 0px var(--color-ink);
 }
 .photo-placeholder {

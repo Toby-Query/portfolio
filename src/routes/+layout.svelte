@@ -6,14 +6,14 @@
 </script>
 
 <MetaTags
-	title="Thups Mukhunyeledzi | Systems Engineer & Dev Log"
-	description="Portfolio of Muthuphei Mukhunyeledzi, a Systems Engineer at BBD focusing on scalable architecture, Java/Spring services, and cloud optimizations."
+	title="Thups Mukhunyeledzi | Software Engineer & Dev Log"
+	description="Portfolio of Muthuphei Mukhunyeledzi, a Software Engineer at BBD specializing in React Native, Expo, and web technologies like Next.js and SolidJS."
 	canonical="https://thups-dev.vercel.app"
 	openGraph={{
 		type: 'website',
 		url: 'https://thups-dev.vercel.app',
-		title: 'Thups Mukhunyeledzi | Systems Engineer & Dev Log',
-		description: 'Portfolio of Thups Mukhunyeledzi, a Systems Engineer at BBD focusing on scalable architecture.',
+		title: 'Thups Mukhunyeledzi | Software Engineer & Dev Log',
+		description: 'Portfolio of Thups Mukhunyeledzi, a Software Engineer at BBD focusing on mobile and web development.',
 		siteName: 'Thups Dev Log',
 		images: [
 			{
@@ -28,12 +28,12 @@
 		creator: '@thups_dev',
 		site: '@thups_dev',
 		cardType: 'summary_large_image',
-		title: 'Thups Mukhunyeledzi | Systems Engineer',
-		description: 'Systems Engineer at BBD | Wits Alumni',
+		title: 'Thups Mukhunyeledzi | Software Engineer',
+		description: 'Software Engineer at BBD | Wits Alumni',
 		image: '/profile_sketch.png',
 		imageAlt: 'Thups Mukhunyeledzi Profile Sketch'
 	}}
-	keywords={['Systems Engineer', 'Software Developer', 'BBD', 'Wits Alumni', 'Java', 'Cloud Architecture']}
+	keywords={['Software Engineer', 'React Native', 'Expo', 'Next.js', 'SolidJS', 'BBD', 'Wits Alumni', 'Azure', 'AWS']}
 	additionalMetaTags={[
 		{
 			name: 'author',
