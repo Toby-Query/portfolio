@@ -68,7 +68,7 @@
     <section style="padding: 4rem 0;" class="animate-on-scroll" use:scrollReveal>
         <div class="about-hero">
             <div class="sketch-photo-frame">
-                <div class="photo-placeholder" style="background-image: url('/profile_sketch.png');"></div>
+                <div class="photo-placeholder" style="background-image: url('/profile_sketch.jpg');"></div>
                 <p style="text-align: center; font-size: 0.9rem; margin-top: 5px; font-weight: 700;">Thups Mukhunyeledzi</p>
             </div>
 

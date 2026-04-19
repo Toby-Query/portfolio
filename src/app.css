@@ -107,7 +107,7 @@ body {
 
 /* --- 4. IMAGE (Polaroid Style) --- */
 .sketch-photo-frame {
-    width: 250px;
+    width: 500px;
     height: 320px;
     background: white;
     border: 3px solid var(--color-ink);
