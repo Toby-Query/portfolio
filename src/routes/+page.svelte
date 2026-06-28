@@ -21,6 +21,14 @@
             tags: ['ROBOTICS', 'HPC', 'CYBERSECURITY', 'AI/ML'],
             color: 'green'
         },
+         {
+            title: 'EXPERIENCE: WITS (CS TUTOR)',
+            role: 'Computer Science Tutor',
+            period: '2026 - Present',
+            focus: 'Tutoring undergraduate students at the University of the Witwatersrand in core computer science modules. Supporting students with concepts in algorithms, data structures, and programming fundamentals.',
+            tags: ['TUTORING', 'ALGORITHMS', 'DATA STRUCTURES', 'WITS'],
+            color: 'green'
+        },
         {
             title: 'EDUCATION: WITS (UNDERGRAD)',
             role: 'BSc Computer Science',
@@ -43,6 +51,15 @@
             color: 'var(--color-blue)'
         }
     ];
+
+    const SANDY_GIFT = {
+        tagline: 'Never give the wrong gift again.',
+        description: 'Sandy Gift takes the guesswork out of gift-giving. Share a wishlist of things you actually want — friends and family can quietly "dibs" items so every gift lands perfectly. No duplicates. No awkward returns. Just the right gift, every time.',
+        role: 'Founder & Engineer',
+        founded: '2026',
+        status: 'LIVE',
+        link: 'https://sandygift.co.za'
+    };
 
     const PROJECTS = [
         {
@@ -148,6 +165,34 @@
         </div>
     </section>
 
+    <!-- Startup Section -->
+    <section class="animate-on-scroll" use:scrollReveal>
+        <SketchHeading number="04" text="STARTUP" />
+        <SketchBox>
+            <div class="startup-header">
+                <div>
+                    <div class="startup-founded-stamp">FOUNDED {SANDY_GIFT.founded}</div>
+                    <h2 class="startup-name">SANDY GIFT</h2>
+                    <p class="startup-tagline">{SANDY_GIFT.tagline}</p>
+                </div>
+                <div class="startup-status-badge">
+                    <span class="status-dot"></span>
+                    {SANDY_GIFT.status}
+                </div>
+            </div>
+
+            <p class="startup-description">{SANDY_GIFT.description}</p>
+
+            <div class="startup-meta">
+                <span><strong>ROLE:</strong> {SANDY_GIFT.role}</span>
+            </div>
+
+            <a href={SANDY_GIFT.link} target="_blank" rel="noopener noreferrer" class="startup-link">
+                VISIT SANDYGIFT.CO.ZA →
+            </a>
+        </SketchBox>
+    </section>
+
     <!-- Contact Section -->
     <footer id="contact" style="padding: 4rem 0; text-align: center;">
         <SketchHeading text="LET'S CHAT." dashed />
@@ -169,5 +214,99 @@
     strong {
         font-weight: 700;
         color: var(--color-red);
+    }
+
+    /* ── Sandy Gift Startup Card ── */
+    .startup-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .startup-founded-stamp {
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        color: var(--color-red);
+        margin-bottom: 0.4rem;
+    }
+
+    .startup-name {
+        font-family: 'Permanent Marker', cursive;
+        font-size: clamp(2.5rem, 8vw, 4.5rem);
+        line-height: 1;
+        color: var(--color-ink);
+        letter-spacing: 0.02em;
+    }
+
+    .startup-tagline {
+        font-size: 1rem;
+        color: #555;
+        margin-top: 0.5rem;
+        font-style: italic;
+    }
+
+    .startup-status-badge {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: var(--color-red);
+        color: white;
+        font-weight: 700;
+        font-size: 0.85rem;
+        letter-spacing: 0.15em;
+        padding: 0.4rem 0.9rem;
+        border: 2px solid var(--color-ink);
+        align-self: flex-start;
+        white-space: nowrap;
+    }
+
+    .status-dot {
+        width: 8px;
+        height: 8px;
+        background: white;
+        border-radius: 50%;
+        animation: pulse 1.5s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.3; }
+    }
+
+    .startup-description {
+        font-size: 1rem;
+        line-height: 1.7;
+        color: var(--color-ink);
+        margin-bottom: 1.5rem;
+        max-width: 680px;
+    }
+
+    .startup-meta {
+        font-size: 0.9rem;
+        color: #555;
+        margin-bottom: 1.5rem;
+    }
+
+    .startup-link {
+        display: inline-block;
+        background: var(--color-ink);
+        color: white;
+        padding: 0.8rem 1.8rem;
+        font-weight: 700;
+        font-size: 1rem;
+        letter-spacing: 0.05em;
+        text-decoration: none;
+        border: 2px solid var(--color-ink);
+        box-shadow: 4px 4px 0px 0px var(--color-red);
+        transition: all 0.2s;
+    }
+    .startup-link:hover {
+        background: var(--color-red);
+        box-shadow: 6px 6px 0px 0px var(--color-ink);
+        transform: translate(-2px, -2px);
     }
 </style>
