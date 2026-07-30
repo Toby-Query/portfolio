@@ -4,7 +4,7 @@
 
 	let { children } = $props();
 
-	const SITE = 'https://thups-dev.vercel.app';
+	const SITE = 'https://thups.vercel.app';
 	const OG_IMAGE = `${SITE}/og-image.png`;
 	const TITLE = 'Thups Mukhunyeledzi | Software Engineer & Dev Log';
 	const DESCRIPTION =
