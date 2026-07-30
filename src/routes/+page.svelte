@@ -8,7 +8,7 @@
         {
             title: 'EXPERIENCE: BBD',
             role: 'Software Engineer',
-            period: '2023 - Present',
+            period: '2025 - Present',
             focus: 'Building cross-platform mobile applications with React Native and Expo. Architecting modern web solutions using Next.js, SolidJS, and 11ty. Leveraging Grafana for monitoring and Azure/AWS for cloud infrastructure.',
             tags: ['REACT NATIVE', 'EXPO', 'NEXT.JS', 'AZURE', 'AWS'],
             color: 'red'
@@ -53,12 +53,12 @@
     ];
 
     const SANDY_GIFT = {
-        tagline: 'Never give the wrong gift again.',
+        tagline: 'Gift giving for the rest of us.',
         description: 'Sandy Gift takes the guesswork out of gift-giving. Share a wishlist of things you actually want — friends and family can quietly "dibs" items so every gift lands perfectly. No duplicates. No awkward returns. Just the right gift, every time.',
         role: 'Founder & Engineer',
         founded: '2026',
         status: 'LIVE',
-        link: 'https://sandygift.co.za'
+        link: 'https://sandygift.app'
     };
 
     const PROJECTS = [
@@ -93,7 +93,14 @@
     <section style="padding: 4rem 0;" class="animate-on-scroll" use:scrollReveal>
         <div class="about-hero">
             <div class="sketch-photo-frame">
-                <div class="photo-placeholder" style="background-image: url('/profile_sketch.jpg');"></div>
+                <img
+                    class="photo-placeholder"
+                    src="/profile_sketch.jpg"
+                    alt="Thups Mukhunyeledzi at his University of the Witwatersrand graduation"
+                    width="1866"
+                    height="2400"
+                    fetchpriority="high"
+                />
                 <p style="text-align: center; font-size: 0.9rem; margin-top: 5px; font-weight: 700;">Thups Mukhunyeledzi</p>
             </div>
 
@@ -188,7 +195,7 @@
             </div>
 
             <a href={SANDY_GIFT.link} target="_blank" rel="noopener noreferrer" class="startup-link">
-                VISIT SANDYGIFT.CO.ZA →
+                VISIT SANDYGIFT.APP →
             </a>
         </SketchBox>
     </section>

@@ -1,26 +1,36 @@
 <script lang="ts">
 	import '../app.css';
-	import { MetaTags } from 'svelte-meta-tags';
+	import { MetaTags, JsonLd } from 'svelte-meta-tags';
 
 	let { children } = $props();
+
+	const SITE = 'https://thups-dev.vercel.app';
+	const OG_IMAGE = `${SITE}/og-image.png`;
+	const TITLE = 'Thups Mukhunyeledzi | Software Engineer & Dev Log';
+	const DESCRIPTION =
+		'Portfolio of Thups Mukhunyeledzi, a Software Engineer at BBD building cross-platform mobile apps with React Native and Expo, and web apps with Next.js and SolidJS. Wits alumni and founder of Sandy Gift.';
+	const IMAGE_ALT = 'Thups Mukhunyeledzi — Software Engineer at BBD, Wits alumni';
 </script>
 
 <MetaTags
-	title="Thups Mukhunyeledzi | Software Engineer & Dev Log"
-	description="Portfolio of Muthuphei Mukhunyeledzi, a Software Engineer at BBD specializing in React Native, Expo, and web technologies like Next.js and SolidJS."
-	canonical="https://thups-dev.vercel.app"
+	title={TITLE}
+	description={DESCRIPTION}
+	canonical={SITE}
 	openGraph={{
 		type: 'website',
-		url: 'https://thups-dev.vercel.app',
-		title: 'Thups Mukhunyeledzi | Software Engineer & Dev Log',
-		description: 'Portfolio of Thups Mukhunyeledzi, a Software Engineer at BBD focusing on mobile and web development.',
+		url: SITE,
+		title: TITLE,
+		description: DESCRIPTION,
 		siteName: 'Thups Dev Log',
+		locale: 'en_ZA',
 		images: [
 			{
-				url: '/profile_sketch.png',
+				url: OG_IMAGE,
+				secureUrl: OG_IMAGE,
+				type: 'image/png',
 				width: 1200,
 				height: 630,
-				alt: 'Thups Mukhunyeledzi Profile Sketch'
+				alt: IMAGE_ALT
 			}
 		]
 	}}
@@ -28,18 +38,59 @@
 		creator: '@thups_dev',
 		site: '@thups_dev',
 		cardType: 'summary_large_image',
-		title: 'Thups Mukhunyeledzi | Software Engineer',
-		description: 'Software Engineer at BBD | Wits Alumni',
-		image: '/profile_sketch.png',
-		imageAlt: 'Thups Mukhunyeledzi Profile Sketch'
+		title: TITLE,
+		description: 'Software Engineer at BBD | Wits Alumni | Founder of Sandy Gift',
+		image: OG_IMAGE,
+		imageAlt: IMAGE_ALT
 	}}
-	keywords={['Software Engineer', 'React Native', 'Expo', 'Next.js', 'SolidJS', 'BBD', 'Wits Alumni', 'Azure', 'AWS']}
-	additionalMetaTags={[
-		{
-			name: 'author',
-			content: 'Muthuphei Mukhunyeledzi'
-		}
+	keywords={[
+		'Thups Mukhunyeledzi',
+		'Muthuphei Mukhunyeledzi',
+		'Software Engineer',
+		'React Native',
+		'Expo',
+		'Next.js',
+		'SolidJS',
+		'BBD',
+		'Wits Alumni',
+		'Azure',
+		'AWS',
+		'Sandy Gift'
 	]}
+	additionalMetaTags={[{ name: 'author', content: 'Muthuphei Mukhunyeledzi' }]}
+/>
+
+<JsonLd
+	schema={{
+		'@type': 'Person',
+		name: 'Muthuphei Mukhunyeledzi',
+		alternateName: 'Thups Mukhunyeledzi',
+		url: SITE,
+		image: OG_IMAGE,
+		jobTitle: 'Software Engineer',
+		email: 'mailto:muthupheimukhunyeledzi@gmail.com',
+		description: DESCRIPTION,
+		worksFor: { '@type': 'Organization', name: 'BBD' },
+		alumniOf: {
+			'@type': 'CollegeOrUniversity',
+			name: 'University of the Witwatersrand'
+		},
+		knowsAbout: [
+			'React Native',
+			'Expo',
+			'Next.js',
+			'SolidJS',
+			'Svelte',
+			'TypeScript',
+			'Azure',
+			'AWS',
+			'Docker'
+		],
+		sameAs: [
+			'https://www.linkedin.com/in/mukhunyeledzi-muthuphei-76b813273/',
+			'https://sandygift.app'
+		]
+	}}
 />
 
 <main>
