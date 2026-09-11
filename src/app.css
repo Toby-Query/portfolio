@@ -127,19 +127,7 @@ body {
 }
 
 /* --- 5. MOBILE RESPONSIVENESS --- */
-@media (min-width: 600px) {
-    .skills-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-    }
-}
 @media (min-width: 900px) {
-    .projects-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2rem;
-    }
     .about-hero {
         display: flex;
         flex-direction: row-reverse;

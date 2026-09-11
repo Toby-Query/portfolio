@@ -3,6 +3,13 @@
     import Tag from '$lib/components/Tag.svelte';
     import SketchHeading from '$lib/components/SketchHeading.svelte';
     import SketchBox from '$lib/components/SketchBox.svelte';
+    import { MEDIUM_PROFILE } from '$lib/medium';
+
+    // Articles are pulled from the Medium RSS feed at build time (see +page.server.ts).
+    let { data } = $props();
+
+    const WRITING_INTRO =
+        'I write on Medium about the things I fall down rabbit holes over — language design, runtimes, physics, and the occasional "what if we actually built that?".';
 
     const EXPERIENCE = [
         {
@@ -26,29 +33,16 @@
             role: 'Computer Science Tutor',
             period: '2026 - Present',
             focus: 'Tutoring undergraduate students at the University of the Witwatersrand in core computer science modules. Supporting students with concepts in algorithms, data structures, and programming fundamentals.',
-            tags: ['TUTORING', 'ALGORITHMS', 'DATA STRUCTURES', 'WITS'],
+            tags: ['OPERATING SYSTEMS', 'DATABASES', 'NETWORKS', 'GRAPHICS'],
             color: 'green'
         },
         {
-            title: 'EDUCATION: WITS (UNDERGRAD)',
-            role: 'BSc Computer Science',
-            period: '2022 - 2024',
-            focus: 'Foundation in algorithms, data structures, and software engineering principles.',
-            tags: ['Operating Systems', 'Databases', 'Networks', 'Graphics'],
+            title: 'COMMUNITY: WITS CYBERSECURITY INTEREST GROUP',
+            role: 'Organising Team',
+            period: '2026 - Present',
+            focus: 'Part of the team that runs the cybersecurity interest group at the University of the Witwatersrand, organising sessions and activities for students getting into security.',
+            tags: ['CYBERSECURITY', 'COMMUNITY'],
             color: 'blue'
-        }
-    ];
-
-    const SKILLS = [
-        {
-            category: 'MOBILE & WEB',
-            items: ['React Native / Expo', 'Next.js / SolidJS / Svelte', '11ty (Static Site Gen)', 'TypeScript / JavaScript'],
-            color: 'var(--color-red)'
-        },
-        {
-            category: 'CLOUD & OPS',
-            items: ['Azure / AWS / Vercel / Firebase', 'Grafana (Monitoring)', 'Docker', 'CI/CD Pipelines'],
-            color: 'var(--color-blue)'
         }
     ];
 
@@ -60,27 +54,6 @@
         status: 'LIVE',
         link: 'https://sandygift.app'
     };
-
-    const PROJECTS = [
-        {
-            title: 'WITS PEN TESTING TOOL',
-            description: 'A specialized security auditing tool developed for the Wits University network to identify and patch vulnerabilities.',
-            link: '#',
-            linkText: '[ VIEW PROJECT ]'
-        },
-        {
-            title: 'MOBILE ECOSYSTEM (BBD)',
-            description: 'Scalable React Native applications with integrated Expo modules and high-performance cross-platform logic.',
-            link: '#',
-            linkText: '[ CASE STUDY ]'
-        },
-        {
-            title: 'MODERN WEB STACK',
-            description: 'Exploration of performance-first frameworks like SolidJS and Next.js for enterprise-grade web experiences.',
-            link: '#',
-            linkText: '[ VIEW DETAILS ]'
-        }
-    ];
 </script>
 
 <div class="main-content">
@@ -137,44 +110,9 @@
         {/each}
     </section>
 
-    <!-- Skillset Section -->
-    <section>
-        <SketchHeading number="02" text="SKILLSET" />
-        <div class="skills-grid">
-            {#each SKILLS as skill}
-                <SketchBox style="background: {skill.color}; color: white;">
-                    <h3 style="font-family: 'Permanent Marker', cursive; border-bottom: 2px solid white; padding-bottom: 5px;">
-                        {skill.category}
-                    </h3>
-                    <ul style="list-style: square; padding-left: 1.5rem;">
-                        {#each skill.items as item}
-                            <li>{item}</li>
-                        {/each}
-                    </ul>
-                </SketchBox>
-            {/each}
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section>
-        <SketchHeading number="03" text="PROJECTS & CODE" />
-        <div class="projects-grid">
-            {#each PROJECTS as project}
-                <SketchBox>
-                    <h3 style="font-size: 1.5rem;">{project.title}</h3>
-                    <p style="font-size: 0.9rem;">{project.description}</p>
-                    <a href={project.link} style="color: var(--color-red); font-weight: 700;">
-                        {project.linkText}
-                    </a>
-                </SketchBox>
-            {/each}
-        </div>
-    </section>
-
     <!-- Startup Section -->
     <section class="animate-on-scroll" use:scrollReveal>
-        <SketchHeading number="04" text="STARTUP" />
+        <SketchHeading number="02" text="STARTUP" />
         <SketchBox>
             <div class="startup-header">
                 <div>
@@ -200,6 +138,46 @@
         </SketchBox>
     </section>
 
+    <!-- Writing Section -->
+    <section class="animate-on-scroll" use:scrollReveal>
+        <SketchHeading number="03" text="WRITING" />
+
+        <div class="writing-intro">
+            <p>{WRITING_INTRO}</p>
+            <a href={MEDIUM_PROFILE} target="_blank" rel="noopener noreferrer" class="writing-follow">
+                FOLLOW ON MEDIUM →
+            </a>
+        </div>
+
+        <div class="writing-grid">
+            {#each data.articles as article (article.link)}
+                <a
+                    class="article-card animate-on-scroll"
+                    href={article.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    use:scrollReveal
+                >
+                    <div class="article-meta">
+                        <time datetime={article.date}>{article.dateLabel}</time>
+                        <span class="article-time">{article.readingTime}</span>
+                    </div>
+
+                    <h3 class="article-title">{article.title}</h3>
+                    <p class="article-excerpt">{article.excerpt}</p>
+
+                    <div class="article-tags">
+                        {#each article.tags as tag (tag)}
+                            <Tag text={tag} />
+                        {/each}
+                    </div>
+
+                    <span class="article-cta">[ READ ON MEDIUM ]</span>
+                </a>
+            {/each}
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <footer id="contact" style="padding: 4rem 0; text-align: center;">
         <SketchHeading text="LET'S CHAT." dashed />
@@ -208,7 +186,8 @@
         </p>
         <div style="font-weight: 700; font-size: 1.3rem;">
             <span class="highlight-red">EMAIL:</span> muthupheimukhunyeledzi@gmail.com<br>
-            <span class="highlight-blue">LINKEDIN:</span> <a href="https://www.linkedin.com/in/mukhunyeledzi-muthuphei-76b813273/" style="color: inherit; text-decoration: none;">/in/mukhunyeledzi-muthuphei</a>
+            <span class="highlight-blue">LINKEDIN:</span> <a href="https://www.linkedin.com/in/mukhunyeledzi-muthuphei-76b813273/" style="color: inherit; text-decoration: none;">/in/mukhunyeledzi-muthuphei</a><br>
+            <span class="highlight-red">MEDIUM:</span> <a href={MEDIUM_PROFILE} target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">@tendanifallain</a>
         </div>
         <p style="margin-top: 3rem; font-size: 0.8rem;">
             DEV LOG END. 2026.
@@ -315,5 +294,120 @@
         background: var(--color-red);
         box-shadow: 6px 6px 0px 0px var(--color-ink);
         transform: translate(-2px, -2px);
+    }
+
+    /* ── Writing / Medium ── */
+    .writing-intro {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .writing-intro p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        max-width: min(620px, 100%);
+    }
+
+    .writing-follow {
+        flex-shrink: 0;
+        background: var(--color-ink);
+        color: var(--color-paper);
+        padding: 0.7rem 1.4rem;
+        font-weight: 700;
+        font-size: 0.9rem;
+        letter-spacing: 0.05em;
+        text-decoration: none;
+        border: 2px solid var(--color-ink);
+        box-shadow: 4px 4px 0px 0px var(--color-red);
+        transition: all 0.2s;
+    }
+    .writing-follow:hover {
+        background: var(--color-red);
+        box-shadow: 6px 6px 0px 0px var(--color-ink);
+        transform: translate(-2px, -2px);
+    }
+
+    .writing-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
+        gap: 1.5rem;
+    }
+
+    .article-card {
+        display: flex;
+        flex-direction: column;
+        background: white;
+        border: 3px solid var(--color-ink);
+        box-shadow: 5px 5px 0px 0px var(--color-ink);
+        padding: 1.5rem;
+        text-decoration: none;
+        color: var(--color-ink);
+        transition: all 0.2s;
+    }
+    .article-card:hover {
+        transform: translate(-3px, -3px) rotate(-0.4deg);
+        box-shadow: 8px 8px 0px 0px var(--color-red);
+    }
+
+    .article-meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0.75rem;
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        color: #555;
+        padding-bottom: 0.6rem;
+        margin-bottom: 0.9rem;
+        border-bottom: 2px dashed var(--color-ink);
+    }
+
+    .article-time {
+        background: var(--color-blue);
+        color: white;
+        padding: 2px 7px;
+        white-space: nowrap;
+    }
+
+    .article-title {
+        font-size: 1.35rem;
+        line-height: 1.25;
+        margin-bottom: 0.75rem;
+        /* Medium titles run long; never let one push the card wider. */
+        overflow-wrap: break-word;
+    }
+
+    .article-excerpt {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        color: #333;
+        /* Keeps cards in a row roughly level regardless of excerpt length. */
+        flex-grow: 1;
+        margin-bottom: 1rem;
+    }
+
+    .article-tags {
+        margin-bottom: 1rem;
+    }
+
+    .article-cta {
+        font-weight: 700;
+        font-size: 0.9rem;
+        color: var(--color-red);
+    }
+
+    @media (max-width: 600px) {
+        .writing-intro {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .writing-grid {
+            grid-template-columns: 1fr;
+        }
     }
 </style>

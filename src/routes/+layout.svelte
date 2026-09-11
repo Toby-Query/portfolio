@@ -55,7 +55,10 @@
 		'Wits Alumni',
 		'Azure',
 		'AWS',
-		'Sandy Gift'
+		'Sandy Gift',
+		'Medium',
+		'Technical Writing',
+		'tendanifallain'
 	]}
 	additionalMetaTags={[{ name: 'author', content: 'Muthuphei Mukhunyeledzi' }]}
 />
@@ -88,8 +91,24 @@
 		],
 		sameAs: [
 			'https://www.linkedin.com/in/mukhunyeledzi-muthuphei-76b813273/',
-			'https://sandygift.app'
+			'https://sandygift.app',
+			'https://medium.com/@tendanifallain'
 		]
+	}}
+/>
+
+<JsonLd
+	schema={{
+		'@type': 'Blog',
+		name: 'Thups Mukhunyeledzi on Medium',
+		url: 'https://medium.com/@tendanifallain',
+		description:
+			'Articles on programming languages, runtimes, physics and software engineering by Muthuphei Mukhunyeledzi.',
+		author: {
+			'@type': 'Person',
+			name: 'Muthuphei Mukhunyeledzi',
+			url: SITE
+		}
 	}}
 />
 
