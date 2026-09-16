@@ -54,6 +54,54 @@
         status: 'LIVE',
         link: 'https://sandygift.app'
     };
+
+    const PROJECTS = [
+        {
+            name: 'WCU — WITS CUDA EMULATOR',
+            year: '2026',
+            language: 'C',
+            description:
+                'Learning CUDA shouldn\'t require owning a GPU. Runs CUDA C on any Mac or Linux machine and names the thread and source line behind every race and out-of-bounds write.',
+            tags: ['C', 'CUDA', 'COMPILERS', 'HPC'],
+            link: 'https://github.com/Mukhunyeledzi-Muthuphei/wits-cuda-emulator'
+        },
+        {
+            name: 'GIVE ME BACK MY SCREENSHOT',
+            year: '2026',
+            language: 'SWIFT',
+            description:
+                'macOS drops your screenshot on the desktop, not the clipboard, so pasting one means going to find it first. This puts every new screenshot on the clipboard — ⌘V just works.',
+            tags: ['SWIFT', 'MACOS', 'APPKIT'],
+            link: 'https://github.com/Mukhunyeledzi-Muthuphei/give-me-back-my-screenshot'
+        },
+        {
+            name: 'PENTESTKIT',
+            year: '2026',
+            language: 'SVELTE / PYTHON',
+            description:
+                'Basic recon means juggling nmap, dig, whois, nikto and gobuster across a pile of terminal tabs. This puts them behind one web UI, with scan output streaming live.',
+            tags: ['SVELTEKIT', 'FASTAPI', 'DOCKER', 'CYBERSECURITY'],
+            link: 'https://github.com/wits-cybersecurity-admin/pentester'
+        },
+        {
+            name: 'QUOTES API',
+            year: '2026',
+            language: 'JAVASCRIPT',
+            description:
+                'I am a lover of wisdom, and this is the wisdom I have collected over the years. It serves the whole collection as JSON from a Google Sheet I keep adding to, so a new quote never needs a deploy.',
+            tags: ['JAVASCRIPT', 'SERVERLESS', 'VERCEL', 'REST API'],
+            link: 'https://github.com/Toby-Query/quotes-api'
+        },
+        {
+            name: 'CHROMA TUI',
+            year: '2025',
+            language: 'PYTHON',
+            description:
+                'Peeking inside a ChromaDB instance usually means writing throwaway Python. This browses collections, documents, metadata and embeddings from the terminal.',
+            tags: ['PYTHON', 'TUI', 'CHROMADB', 'VECTOR DB'],
+            link: 'https://github.com/Mukhunyeledzi-Muthuphei/chromadb-tui'
+        }
+    ];
 </script>
 
 <div class="main-content">
@@ -110,9 +158,9 @@
         {/each}
     </section>
 
-    <!-- Startup Section -->
+    <!-- My Babies Section -->
     <section class="animate-on-scroll" use:scrollReveal>
-        <SketchHeading number="02" text="STARTUP" />
+        <SketchHeading number="02" text="MY BABIES" />
         <SketchBox>
             <div class="startup-header">
                 <div>
@@ -136,6 +184,34 @@
                 VISIT SANDYGIFT.APP →
             </a>
         </SketchBox>
+
+        <div class="card-grid">
+            {#each PROJECTS as project (project.link)}
+                <a
+                    class="card animate-on-scroll"
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    use:scrollReveal
+                >
+                    <div class="card-meta">
+                        <span>{project.year}</span>
+                        <span class="card-badge">{project.language}</span>
+                    </div>
+
+                    <h3 class="card-title">{project.name}</h3>
+                    <p class="card-excerpt">{project.description}</p>
+
+                    <div class="card-tags">
+                        {#each project.tags as tag (tag)}
+                            <Tag text={tag} />
+                        {/each}
+                    </div>
+
+                    <span class="card-cta">[ VIEW ON GITHUB ]</span>
+                </a>
+            {/each}
+        </div>
     </section>
 
     <!-- Writing Section -->
@@ -149,30 +225,30 @@
             </a>
         </div>
 
-        <div class="writing-grid">
+        <div class="card-grid">
             {#each data.articles as article (article.link)}
                 <a
-                    class="article-card animate-on-scroll"
+                    class="card animate-on-scroll"
                     href={article.link}
                     target="_blank"
                     rel="noopener noreferrer"
                     use:scrollReveal
                 >
-                    <div class="article-meta">
+                    <div class="card-meta">
                         <time datetime={article.date}>{article.dateLabel}</time>
-                        <span class="article-time">{article.readingTime}</span>
+                        <span class="card-badge">{article.readingTime}</span>
                     </div>
 
-                    <h3 class="article-title">{article.title}</h3>
-                    <p class="article-excerpt">{article.excerpt}</p>
+                    <h3 class="card-title">{article.title}</h3>
+                    <p class="card-excerpt">{article.excerpt}</p>
 
-                    <div class="article-tags">
+                    <div class="card-tags">
                         {#each article.tags as tag (tag)}
                             <Tag text={tag} />
                         {/each}
                     </div>
 
-                    <span class="article-cta">[ READ ON MEDIUM ]</span>
+                    <span class="card-cta">[ READ ON MEDIUM ]</span>
                 </a>
             {/each}
         </div>
@@ -202,7 +278,7 @@
         color: var(--color-red);
     }
 
-    /* ── Sandy Gift Startup Card ── */
+    /* ── Sandy Gift Card ── */
     .startup-header {
         display: flex;
         justify-content: space-between;
@@ -331,13 +407,17 @@
         transform: translate(-2px, -2px);
     }
 
-    .writing-grid {
+    /* ── Shared card grid (projects + Medium articles) ── */
+    .card-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
         gap: 1.5rem;
+        /* A grid ends a section where a SketchBox used to; match its trailing
+           space so the next heading doesn't sit on top of the last card. */
+        margin-bottom: 2rem;
     }
 
-    .article-card {
+    .card {
         display: flex;
         flex-direction: column;
         background: white;
@@ -348,12 +428,12 @@
         color: var(--color-ink);
         transition: all 0.2s;
     }
-    .article-card:hover {
+    .card:hover {
         transform: translate(-3px, -3px) rotate(-0.4deg);
         box-shadow: 8px 8px 0px 0px var(--color-red);
     }
 
-    .article-meta {
+    .card-meta {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -367,22 +447,22 @@
         border-bottom: 2px dashed var(--color-ink);
     }
 
-    .article-time {
+    .card-badge {
         background: var(--color-blue);
         color: white;
         padding: 2px 7px;
         white-space: nowrap;
     }
 
-    .article-title {
+    .card-title {
         font-size: 1.35rem;
         line-height: 1.25;
         margin-bottom: 0.75rem;
-        /* Medium titles run long; never let one push the card wider. */
+        /* Titles run long; never let one push the card wider. */
         overflow-wrap: break-word;
     }
 
-    .article-excerpt {
+    .card-excerpt {
         font-size: 0.95rem;
         line-height: 1.6;
         color: #333;
@@ -391,11 +471,11 @@
         margin-bottom: 1rem;
     }
 
-    .article-tags {
+    .card-tags {
         margin-bottom: 1rem;
     }
 
-    .article-cta {
+    .card-cta {
         font-weight: 700;
         font-size: 0.9rem;
         color: var(--color-red);
@@ -406,7 +486,7 @@
             flex-direction: column;
             align-items: flex-start;
         }
-        .writing-grid {
+        .card-grid {
             grid-template-columns: 1fr;
         }
     }
