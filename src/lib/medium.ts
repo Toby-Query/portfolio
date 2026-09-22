@@ -19,6 +19,22 @@ export const MEDIUM_FEED = 'https://medium.com/feed/@tendanifallain';
 const WORDS_PER_MINUTE = 200;
 const MONTHS = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
 
+// Cards in a grid row stretch to match the tallest, and `.card-excerpt` has
+// `flex-grow: 1` — so a one-line title leaves a block of dead space a longer
+// excerpt could have filled. Budget the excerpt by how many lines the title
+// eats. The per-line counts are eyeballed at the ~320px card width; they only
+// need to be close, since the result is a character cap and not a layout rule.
+const TITLE_CHARS_PER_LINE = 27;
+const EXCERPT_CHARS_PER_LINE = 35;
+const MAX_TITLE_LINES = 4;
+const BASE_EXCERPT_CHARS = 170;
+
+/** Excerpt character budget: the longest titles get the base, short ones get the slack back. */
+function excerptBudget(title: string): number {
+	const titleLines = Math.min(MAX_TITLE_LINES, Math.ceil(title.length / TITLE_CHARS_PER_LINE));
+	return BASE_EXCERPT_CHARS + (MAX_TITLE_LINES - titleLines) * EXCERPT_CHARS_PER_LINE;
+}
+
 function decodeEntities(input: string): string {
 	return input
 		.replace(/&lt;/g, '<')
@@ -61,6 +77,7 @@ export function parseFeed(xml: string): Article[] {
 	const items = xml.match(/<item>[\s\S]*?<\/item>/g) ?? [];
 
 	return items.map((item) => {
+		const title = tagText(item, 'title');
 		const body = stripHtml(tagText(item, 'content:encoded'));
 		const minutes = Math.max(
 			1,
@@ -75,14 +92,14 @@ export function parseFeed(xml: string): Article[] {
 			.map((tag) => tag.replace(/-/g, ' ').toUpperCase());
 
 		return {
-			title: tagText(item, 'title'),
+			title,
 			// Drop Medium's `?source=rss-...` referral noise.
 			link: tagText(item, 'link').split('?')[0],
 			date: published.toISOString(),
 			dateLabel: `${published.getUTCDate()} ${MONTHS[published.getUTCMonth()]} ${published.getUTCFullYear()}`,
 			readingTime: `${minutes} MIN READ`,
 			tags,
-			excerpt: truncate(body, 170)
+			excerpt: truncate(body, excerptBudget(title))
 		};
 	});
 }

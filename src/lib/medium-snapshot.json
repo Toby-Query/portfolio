@@ -10,7 +10,7 @@
 			"MATHEMATICS",
 			"PHYSICS"
 		],
-		"excerpt": "Every century or two, a theoretical physicist stands up, clears their throat, and prematurely declares the end of their own field. In 1878, Philipp von Jolly famously…"
+		"excerpt": "Every century or two, a theoretical physicist stands up, clears their throat, and prematurely declares the end of their own field. In 1878, Philipp von Jolly famously warned a young Max Planck against entering physics, claiming that almost everything was already discovered…"
 	},
 	{
 		"title": "The Ape is Slowing Down the Machine: Why the Human Brain Is the New Bottleneck in AI Engineering",
@@ -36,7 +36,7 @@
 			"EVOLUTION",
 			"APOCALYPSE"
 		],
-		"excerpt": "When people talk about artificial intelligence and autonomous robotics taking over, the framing is almost always apocalyptic: Terminator killer bots, rogue…"
+		"excerpt": "When people talk about artificial intelligence and autonomous robotics taking over, the framing is almost always apocalyptic: Terminator killer bots, rogue superintelligences, and the violent annihilation of humanity. That framing is…"
 	},
 	{
 		"title": "Sound You Can See: Photo Albums but for voice notes",
@@ -49,7 +49,7 @@
 			"SOFTWARE DEVELOPMENT",
 			"PHOTOS"
 		],
-		"excerpt": "We’ve spent the last decade accumulating an invisible digital footprint. Deep inside your messaging apps and file system sits an ever-growing graveyard of .m4a files…"
+		"excerpt": "We’ve spent the last decade accumulating an invisible digital footprint. Deep inside your messaging apps and file system sits an ever-growing graveyard of .m4a files. Quick thoughts, late-night brain dumps, hilarious snippets of ambient…"
 	},
 	{
 		"title": "Is Starlink the future of MMOs?",
@@ -62,7 +62,7 @@
 			"STARLINK",
 			"PHYSICS"
 		],
-		"excerpt": "For decades, the dream of a Sword Art Online (SAO) style virtual world — a singular, persistent digital reality where thousands of players interact without borders — has…"
+		"excerpt": "For decades, the dream of a Sword Art Online (SAO) style virtual world — a singular, persistent digital reality where thousands of players interact without borders — has been dismissed as a technical impossibility. The culprit wasn’t just…"
 	},
 	{
 		"title": "Quidditch Isn’t Fiction Anymore",
@@ -75,7 +75,7 @@
 			"AI",
 			"ROBOTICS"
 		],
-		"excerpt": "Quidditch has always felt impossible, players flying, objects moving unpredictably, chaos in three dimensions. It belonged to fantasy. Not anymore. We now have drones…"
+		"excerpt": "Quidditch has always felt impossible, players flying, objects moving unpredictably, chaos in three dimensions. It belonged to fantasy. Not anymore. We now have drones that can track targets, avoid obstacles, coordinate in swarms, and react…"
 	},
 	{
 		"title": "Why the Universe is a Calculation of a Fake Beginning",
@@ -88,7 +88,7 @@
 			"PHILOSOPHY",
 			"PHYSICS"
 		],
-		"excerpt": "There is a quiet assumption buried deep inside modern physics, so familiar that we rarely stop to question it. The assumption is called information conservation. More…"
+		"excerpt": "There is a quiet assumption buried deep inside modern physics, so familiar that we rarely stop to question it. The assumption is called information conservation. More formally, it comes from a principle known as unitarity. But stripped of…"
 	},
 	{
 		"title": "Why JavaScript Needed Arrow Functions",
@@ -101,7 +101,7 @@
 			"WEB DEVELOPMENT",
 			"PROGRAMMING"
 		],
-		"excerpt": "In programming, there are two fundamental ways to decide what a name refers to: Lexical scoping — names are resolved based on where the code is written. You can read the…"
+		"excerpt": "In programming, there are two fundamental ways to decide what a name refers to: Lexical scoping — names are resolved based on where the code is written. You can read the file and understand what happens. Dynamic scoping — names are…"
 	},
 	{
 		"title": "Deno 2.0 and the return of package.json",
@@ -114,7 +114,7 @@
 			"JAVASCRIPT",
 			"PROGRAMMING"
 		],
-		"excerpt": "When Deno first launched, the pitch was radical: “No configuration files. No manifests. Just code.” In Ryan Dahl’s vision, if you wanted to use a library, you simply…"
+		"excerpt": "When Deno first launched, the pitch was radical: “No configuration files. No manifests. Just code.” In Ryan Dahl’s vision, if you wanted to use a library, you simply pointed to its URL. It was beautiful. It was clean. It was exactly how…"
 	},
 	{
 		"title": "Node_modules was a mistake, why Deno needed to exist",
@@ -127,6 +127,6 @@
 			"WEB DEVELOPMENT",
 			"JAVASCRIPT"
 		],
-		"excerpt": "Credit where it’s due: before I moved to Node, I had dealt with multiple package managers, but I never really paid attention to them. They were just magical background…"
+		"excerpt": "Credit where it’s due: before I moved to Node, I had dealt with multiple package managers, but I never really paid attention to them. They were just magical background processes. npm changed that. It was the first time I had to look under…"
 	}
 ]
