@@ -1,5 +1,31 @@
 [
 	{
+		"title": "Physics is Dead",
+		"link": "https://medium.com/@tendanifallain/physics-is-dead-b4c50fb973cc",
+		"date": "2026-09-22T19:20:30.000Z",
+		"dateLabel": "22 SEP 2026",
+		"readingTime": "5 MIN READ",
+		"tags": [
+			"PHILOSOPHY",
+			"MATHEMATICS",
+			"PHYSICS"
+		],
+		"excerpt": "Every century or two, a theoretical physicist stands up, clears their throat, and prematurely declares the end of their own field. In 1878, Philipp von Jolly famously…"
+	},
+	{
+		"title": "The Ape is Slowing Down the Machine: Why the Human Brain Is the New Bottleneck in AI Engineering",
+		"link": "https://medium.com/@tendanifallain/the-ape-is-slowing-down-the-machine-why-the-human-brain-is-the-new-bottleneck-in-ai-engineering-a2b139e71a65",
+		"date": "2026-09-15T11:09:04.000Z",
+		"dateLabel": "15 SEP 2026",
+		"readingTime": "1 MIN READ",
+		"tags": [
+			"AI",
+			"PROGRAMMING",
+			"VIBE CODING"
+		],
+		"excerpt": "There is a distinct, humiliating flavor of silence that hits at 1:00 AM after you’ve spent forty-five minutes arguing with an AI model. You prompt it to build a module…"
+	},
+	{
 		"title": "Homo Intelligentus: We Are Them, and They Are Us",
 		"link": "https://medium.com/@tendanifallain/homo-intelligentus-we-are-them-and-they-are-us-079a165b17d6",
 		"date": "2026-09-11T23:48:03.000Z",
@@ -102,18 +128,5 @@
 			"JAVASCRIPT"
 		],
 		"excerpt": "Credit where it’s due: before I moved to Node, I had dealt with multiple package managers, but I never really paid attention to them. They were just magical background…"
-	},
-	{
-		"title": "What exactly does lexical scoping mean?",
-		"link": "https://medium.com/@tendanifallain/what-exactly-does-lexical-scoping-mean-e719cc6391fb",
-		"date": "2025-12-09T22:04:23.000Z",
-		"dateLabel": "9 DEC 2025",
-		"readingTime": "3 MIN READ",
-		"tags": [
-			"PROGRAMMING LANGUAGES",
-			"INTERPRETERS",
-			"PROGRAMMING"
-		],
-		"excerpt": "I was reading Crafting Interpreters (by Robert Nystrom) recently, and I ran into a term that has haunted me before: Lexical Scoping. It wasn’t my first time seeing it…"
 	}
 ]
