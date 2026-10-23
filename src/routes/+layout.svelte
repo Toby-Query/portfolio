@@ -6,9 +6,9 @@
 
 	const SITE = 'https://thups.vercel.app';
 	const OG_IMAGE = `${SITE}/og-image.png`;
-	const TITLE = 'Thups Mukhunyeledzi | Software Engineer & Dev Log';
+	const TITLE = 'Thups Mukhunyeledzi | Software Engineer & Systems Theorist';
 	const DESCRIPTION =
-		'Portfolio of Thups Mukhunyeledzi, a Software Engineer at BBD building cross-platform mobile apps with React Native and Expo, and web apps with Next.js and SolidJS. Wits alumni and founder of Sandy Gift.';
+		'Portfolio of Thups Mukhunyeledzi, a software engineer by profession and a systems theorist by calling. Builds mobile apps with React Native and Expo and web apps with Next.js and SolidJS at BBD, and writes about how systems behave. Wits alumni and founder of Sandy Gift.';
 	const IMAGE_ALT = 'Thups Mukhunyeledzi — Software Engineer at BBD, Wits alumni';
 </script>
 
@@ -39,7 +39,7 @@
 		site: '@thups_dev',
 		cardType: 'summary_large_image',
 		title: TITLE,
-		description: 'Software Engineer at BBD | Wits Alumni | Founder of Sandy Gift',
+		description: 'Software Engineer at BBD | Systems Theorist | Wits Alumni | Founder of Sandy Gift',
 		image: OG_IMAGE,
 		imageAlt: IMAGE_ALT
 	}}
@@ -47,6 +47,7 @@
 		'Thups Mukhunyeledzi',
 		'Muthuphei Mukhunyeledzi',
 		'Software Engineer',
+		'Systems Theory',
 		'React Native',
 		'Expo',
 		'Next.js',

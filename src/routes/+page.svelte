@@ -140,7 +140,7 @@
                     ENGINEER<span class="highlight-red">.</span>
                 </h1>
                 <p style="font-size: 1.5rem; margin-top: 1rem;">
-                    <span class="highlight-blue">WITS ALUMNI</span> // Software Engineer at <span class="highlight-red">BBD</span>. Specialized in building high-performance mobile and web applications with a focus on scalable architecture.
+                    <span class="highlight-blue">WITS ALUMNI</span> // By day, a Software Engineer at <span class="highlight-red">BBD</span>, building mobile and web apps. The rest of the time I'm pulling systems apart to see why they behave the way they do: runtimes, cars, brains, the universe.
                 </p>
                 <a href="#contact" class="btn-sketch">START PROJECT // CONTACT</a>
             </div>
