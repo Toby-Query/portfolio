@@ -1,5 +1,31 @@
 [
 	{
+		"title": "You Don’t Teach an Old Dog New Tricks — You Kill It",
+		"link": "https://medium.com/@tendanifallain/you-dont-teach-an-old-dog-new-tricks-you-kill-it-64f23c2bdd8d",
+		"date": "2026-10-05T13:17:03.000Z",
+		"dateLabel": "5 OCT 2026",
+		"readingTime": "4 MIN READ",
+		"tags": [
+			"WISDOM",
+			"AI",
+			"NEUROSCIENCE"
+		],
+		"excerpt": "In machine learning, there is a persistent wall that every deep neural architecture eventually hits: loss of plasticity. You can feed a neural network petabytes of high-quality data, scale its parameters into the trillions, and train it…"
+	},
+	{
+		"title": "Generational Knowledge in AI",
+		"link": "https://medium.com/@tendanifallain/generational-knowledge-in-ai-87b9cfcff425",
+		"date": "2026-10-05T08:14:55.000Z",
+		"dateLabel": "5 OCT 2026",
+		"readingTime": "4 MIN READ",
+		"tags": [
+			"EVOLUTION",
+			"AI",
+			"DATA SCIENCE"
+		],
+		"excerpt": "When critics compare human cognition to artificial intelligence, one classic counterargument almost always leads the conversation: sample efficiency. A toddler can see three pictures of a cat and reliably identify one for the rest of their…"
+	},
+	{
 		"title": "Physics is Dead",
 		"link": "https://medium.com/@tendanifallain/physics-is-dead-b4c50fb973cc",
 		"date": "2026-09-22T19:20:30.000Z",
@@ -50,83 +76,5 @@
 			"PHOTOS"
 		],
 		"excerpt": "We’ve spent the last decade accumulating an invisible digital footprint. Deep inside your messaging apps and file system sits an ever-growing graveyard of .m4a files. Quick thoughts, late-night brain dumps, hilarious snippets of ambient…"
-	},
-	{
-		"title": "Is Starlink the future of MMOs?",
-		"link": "https://medium.com/@tendanifallain/is-starlink-the-future-of-mmos-a3eff4f68a60",
-		"date": "2026-05-11T15:57:34.000Z",
-		"dateLabel": "11 MAY 2026",
-		"readingTime": "2 MIN READ",
-		"tags": [
-			"ANIME",
-			"STARLINK",
-			"PHYSICS"
-		],
-		"excerpt": "For decades, the dream of a Sword Art Online (SAO) style virtual world — a singular, persistent digital reality where thousands of players interact without borders — has been dismissed as a technical impossibility. The culprit wasn’t just…"
-	},
-	{
-		"title": "Quidditch Isn’t Fiction Anymore",
-		"link": "https://medium.com/@tendanifallain/quidditch-isnt-fiction-anymore-46fd2bc78f13",
-		"date": "2026-04-05T08:11:43.000Z",
-		"dateLabel": "5 APR 2026",
-		"readingTime": "1 MIN READ",
-		"tags": [
-			"HARRY POTTER",
-			"AI",
-			"ROBOTICS"
-		],
-		"excerpt": "Quidditch has always felt impossible, players flying, objects moving unpredictably, chaos in three dimensions. It belonged to fantasy. Not anymore. We now have drones that can track targets, avoid obstacles, coordinate in swarms, and react…"
-	},
-	{
-		"title": "Why the Universe is a Calculation of a Fake Beginning",
-		"link": "https://medium.com/@tendanifallain/why-the-universe-is-a-calculation-of-a-fake-beginning-73bed433a94b",
-		"date": "2026-01-02T07:38:43.000Z",
-		"dateLabel": "2 JAN 2026",
-		"readingTime": "5 MIN READ",
-		"tags": [
-			"INFORMATION THEORY",
-			"PHILOSOPHY",
-			"PHYSICS"
-		],
-		"excerpt": "There is a quiet assumption buried deep inside modern physics, so familiar that we rarely stop to question it. The assumption is called information conservation. More formally, it comes from a principle known as unitarity. But stripped of…"
-	},
-	{
-		"title": "Why JavaScript Needed Arrow Functions",
-		"link": "https://medium.com/@tendanifallain/why-javascript-needed-arrow-functions-9e15ab00b241",
-		"date": "2025-12-23T00:10:50.000Z",
-		"dateLabel": "23 DEC 2025",
-		"readingTime": "3 MIN READ",
-		"tags": [
-			"INTERPRETERS",
-			"WEB DEVELOPMENT",
-			"PROGRAMMING"
-		],
-		"excerpt": "In programming, there are two fundamental ways to decide what a name refers to: Lexical scoping — names are resolved based on where the code is written. You can read the file and understand what happens. Dynamic scoping — names are…"
-	},
-	{
-		"title": "Deno 2.0 and the return of package.json",
-		"link": "https://medium.com/@tendanifallain/deno-2-0-and-the-return-of-package-json-28d5ea82fa5a",
-		"date": "2025-12-21T20:36:00.000Z",
-		"dateLabel": "21 DEC 2025",
-		"readingTime": "2 MIN READ",
-		"tags": [
-			"WEB DEVELOPMENT",
-			"JAVASCRIPT",
-			"PROGRAMMING"
-		],
-		"excerpt": "When Deno first launched, the pitch was radical: “No configuration files. No manifests. Just code.” In Ryan Dahl’s vision, if you wanted to use a library, you simply pointed to its URL. It was beautiful. It was clean. It was exactly how…"
-	},
-	{
-		"title": "Node_modules was a mistake, why Deno needed to exist",
-		"link": "https://medium.com/@tendanifallain/node-modules-was-a-mistake-why-deno-needed-to-exist-7f6a153c3315",
-		"date": "2025-12-21T19:43:54.000Z",
-		"dateLabel": "21 DEC 2025",
-		"readingTime": "3 MIN READ",
-		"tags": [
-			"DENO",
-			"WEB DEVELOPMENT",
-			"JAVASCRIPT"
-		],
-		"excerpt": "Credit where it’s due: before I moved to Node, I had dealt with multiple package managers, but I never really paid attention to them. They were just magical background processes. npm changed that. It was the first time I had to look under…"
 	}
 ]

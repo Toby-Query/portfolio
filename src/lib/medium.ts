@@ -16,6 +16,9 @@ export type Article = {
 export const MEDIUM_PROFILE = 'https://medium.com/@tendanifallain';
 export const MEDIUM_FEED = 'https://medium.com/feed/@tendanifallain';
 
+// Only the newest posts are shown; older ones drop off the page.
+export const MAX_ARTICLES = 6;
+
 const WORDS_PER_MINUTE = 200;
 const MONTHS = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
 
@@ -74,7 +77,7 @@ function truncate(text: string, limit: number): string {
 }
 
 export function parseFeed(xml: string): Article[] {
-	const items = xml.match(/<item>[\s\S]*?<\/item>/g) ?? [];
+	const items = (xml.match(/<item>[\s\S]*?<\/item>/g) ?? []).slice(0, MAX_ARTICLES);
 
 	return items.map((item) => {
 		const title = tagText(item, 'title');

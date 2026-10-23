@@ -57,6 +57,15 @@
 
     const PROJECTS = [
         {
+            name: 'CRASHAI',
+            year: '2026',
+            language: 'PYTHON',
+            description:
+                'Your car can brake each wheel on its own; you can\'t. A neural network takes over in the last second before a crash, steering and braking each wheel separately, and halves crashes compared with a scripted swerve.',
+            tags: ['PYTHON', 'REINFORCEMENT LEARNING', 'SIMULATION', 'AUTOMOTIVE'],
+            link: 'https://github.com/Mukhunyeledzi-Muthuphei/CrashAI'
+        },
+        {
             name: 'WCU — WITS CUDA EMULATOR',
             year: '2026',
             language: 'C',
